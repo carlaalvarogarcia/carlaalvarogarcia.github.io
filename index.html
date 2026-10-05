@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carla Álvaro — UX &amp; Content Designer</title>
+<meta name="description" content="Portfolio of Carla Álvaro, a Content Designer specialized in UX Writing. Case studies on gamification, AI-powered chatbot optimization, trend content and carpooling app design.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Carla Álvaro — UX &amp; Content Designer">
+<meta property="og:description" content="Portfolio of Carla Álvaro, a Content Designer specialized in UX Writing. Case studies on gamification, AI-powered chatbot optimization, trend content and carpooling app design.">
+<meta property="og:image" content="https://carlaalvarogarcia.github.io/assets/img000.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,700&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="es" href="es.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<style>
+  :root{
+    --paper:#F6F5F0; --ink:#1E2A27; --ink-soft:#4B5854; --line:#D8D6CC;
+    --teal:#2E6F63; --clay:#C1542F; --paper-raise:#EFEDE4;
+    --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-size:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --paper:#161C1A; --ink:#EDEAE1; --ink-soft:#AEB6B1; --line:#2B332F; --paper-raise:#1C2320; }
+  }
+  :root[data-theme="dark"]{ --paper:#161C1A; --ink:#EDEAE1; --ink-soft:#AEB6B1; --line:#2B332F; --paper-raise:#1C2320; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:60px;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-sans); font-weight:400;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); line-height:1.6; }
+  a{color:inherit}
+  .wrap{max-width:760px; margin:0 auto; padding:0 28px;}
+  header{ position:sticky; top:0; top:env(safe-area-inset-top,0px);
+    background:color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line); z-index:10; }
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
+  .brand{font-family:var(--font-serif); font-size:1.25rem; font-weight:600; text-decoration:none;}
+  nav{display:flex; gap:22px; font-size:1rem;}
+  nav a{text-decoration:none; color:var(--ink-soft); font-weight:500; border-bottom:1px solid transparent;}
+  nav a:hover, nav a:focus-visible{color:var(--ink); border-color:var(--clay);}
+
+  .hero{padding:72px 0 56px; border-bottom:1px solid var(--line);}
+  .hero-flex{display:flex; align-items:center; justify-content:space-between; gap:40px;}
+  .hero-text{flex:1; min-width:0;}
+  .hero-photo{
+    flex-shrink:0; width:280px; height:280px; border-radius:50%;
+    border:1px solid var(--line); background:var(--paper-raise);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft);
+    overflow:hidden;
+  }
+  .hero-photo img{width:100%; height:100%; object-fit:cover; border-radius:50%;}
+  .kicker{font-family:var(--font-sans); font-weight:600; letter-spacing:.02em; font-size:1rem; color:var(--teal); margin:0 0 14px;}
+  .kicker::before{content:"// "; color:var(--ink-soft);}
+  h1{font-family:var(--font-serif); font-weight:700; font-size:clamp(2.1rem,5vw,3rem); line-height:1.15; margin:0 0 20px; max-width:16ch;}
+  .lede{font-size:1.125rem; font-weight:400; color:var(--ink-soft); max-width:56ch; margin:0 0 32px; text-align:justify; text-justify:inter-word;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .btn{ font-family:var(--font-sans); font-weight:600; font-size:1rem; text-decoration:none; padding:12px 26px; border-radius:999px; display:inline-block; }
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-primary:hover{background:var(--teal);}
+  .btn-ghost{border:1px solid var(--line); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .cta-center{margin-top:40px; text-align:center;}
+
+  section{padding:64px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex; align-items:baseline; gap:12px; margin-bottom:36px;}
+  .section-head .kicker{margin:0;}
+  .section-head h2{font-family:var(--font-serif); font-weight:700; font-size:1.6rem; margin:0;}
+
+  .case{
+    display:flex; gap:22px; align-items:center;
+    margin-bottom:18px; padding:14px;
+    background:var(--paper-raise); border:1px solid var(--line); border-radius:8px;
+  }
+  .case-thumb{
+    flex-shrink:0; width:200px; height:132px; border-radius:5px;
+    border:1px dashed var(--line); background:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft);
+    overflow:hidden;
+  }
+  .case-thumb:has(img){ border:none; background:transparent; }
+  .case-thumb img{width:100%; height:100%; object-fit:contain;}
+  .case-body{flex:1; min-width:0; padding:4px 4px 4px 0;}
+  .case-top{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:8px;}
+  .case h3{font-family:var(--font-serif); font-weight:700; font-size:1.2rem; margin:0;}
+  .case p{margin:0 0 10px; color:var(--ink-soft); max-width:60ch; text-align:justify; text-justify:inter-word;}
+  .case h3 a{color:inherit; text-decoration:none;}
+  .case h3 a:hover, .case h3 a:focus-visible{color:var(--clay); text-decoration:underline; text-underline-offset:4px;}
+  .tags{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;}
+  .tag{ font-family:var(--font-serif); font-weight:400; font-size:0.8rem; color:var(--teal); border:1px solid var(--line); padding:3px 10px; border-radius:20px; background:var(--paper); }
+  .read{
+    font-family:var(--font-sans); font-weight:600; font-size:1rem; text-decoration:none;
+    color:var(--clay); border:1.5px solid var(--clay); border-radius:999px;
+    padding:9px 20px; display:inline-block; margin-top:2px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .read:hover{background:var(--clay); color:var(--paper); border-color:var(--clay);}
+  .case.placeholder{background:transparent; border-style:dashed;}
+  .case.placeholder p{font-style:italic;}
+
+  .about p{max-width:58ch; color:var(--ink-soft); margin:0 0 14px; text-align:justify; text-justify:inter-word;}
+  .about strong{color:var(--ink); font-weight:600;}
+
+  footer{padding:48px 0 64px;}
+  .contact-card{
+    background:var(--paper-raise); border:1px solid var(--line); border-radius:16px;
+    padding:56px 32px; text-align:center;
+  }
+  .talk-title{font-family:var(--font-serif); font-weight:700; font-style:italic; font-size:clamp(2rem,5vw,2.6rem); margin:14px 0 34px;}
+  .contact-links{display:flex; gap:28px; flex-wrap:wrap; justify-content:center; font-family:var(--font-sans); font-weight:500; font-size:1rem;}
+  .contact-links a{text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:4px;}
+  .contact-links a:hover{text-decoration-color:var(--clay);}
+  .contact-card .kicker{text-align:center;}
+  .fineprint{margin-top:24px; font-size:1rem; color:var(--ink-soft);}
+
+  /* full case study */
+  .case-full{padding:80px 0; border-bottom:1px solid var(--line); display:none;}
+  .case-full .meta{display:flex; gap:28px; flex-wrap:wrap; font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft); margin:20px 0 40px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .case-full .meta div b{display:block; color:var(--ink); font-weight:600; margin-top:3px;}
+  .case-full h2.title{font-family:var(--font-serif); font-weight:700; font-size:clamp(1.9rem,4.5vw,2.5rem); margin:0 0 8px; max-width:20ch;}
+  .case-full .back{font-family:var(--font-sans); font-weight:500; font-size:1rem; text-decoration:none; color:var(--ink-soft);}
+  .case-full .back:hover{color:var(--clay);}
+  .case-full h4{font-family:var(--font-serif); font-weight:700; font-size:1.3rem; margin:44px 0 14px;}
+  .case-full p, .case-full li{color:var(--ink-soft); max-width:100%; text-align:justify; text-justify:inter-word;}
+  .case-full p.cta-center{text-align:center;}
+  .case-full li{margin-bottom:6px;}
+  .case-full strong{color:var(--ink);}
+  .img-note{ font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft); border:1px dashed var(--line); border-radius:4px; padding:10px 14px; margin:14px 0; }
+  .case-img{display:block; max-width:100%; height:auto; margin:20px auto;}
+  .img-grid{display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin:20px 0;}
+  .img-grid img{max-width:100%; height:auto; flex:1 1 auto;}
+  .img-grid.cols-2 img{flex-basis:calc(50% - 8px); max-width:calc(50% - 8px);}
+  .img-grid.cols-3 img{flex-basis:calc(33.333% - 11px); max-width:calc(33.333% - 11px); min-width:120px;}
+  .img-grid.cols-4 img{flex-basis:calc(25% - 12px); max-width:calc(25% - 12px); min-width:140px;}
+  .img-grid img.zoomable, img.case-img.zoomable{cursor:zoom-in;}
+  .fig-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; align-items:start;}
+  .fig-grid figure{margin:0;}
+  .fig-grid img{display:block; width:100%; height:auto; cursor:zoom-in;}
+  @media (max-width:560px){ .fig-grid{grid-template-columns:1fr;} }
+  .ba-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 16px; margin:24px 0;}
+  .case-full p.ba-head{margin:0; text-align:center; font-family:var(--font-sans); font-weight:600; font-size:1rem; color:var(--teal);}
+  .ba-cell{background:var(--paper-raise); border:1px solid var(--line); border-radius:8px; padding:14px 16px; min-width:0;}
+  .case-full .ba-cell p{margin:0 0 8px; text-align:left; font-size:.95rem; line-height:1.5;}
+  .case-full .ba-cell p.ba-q{font-weight:700; color:var(--ink);}
+  .case-full .ba-cell p.ba-tag{display:none; margin:0 0 6px; font-weight:600; font-size:.85rem; color:var(--teal); text-transform:uppercase; letter-spacing:.04em;}
+  .ba-cell .img-note{margin:0;}
+  .ba-notes{grid-column:1 / -1; border-left:3px solid var(--clay); padding:2px 0 2px 14px; margin:-2px 0 14px;}
+  .case-full .ba-notes p.ba-notes-title{margin:0 0 4px; text-align:left; font-weight:600; font-size:.85rem; color:var(--clay); text-transform:uppercase; letter-spacing:.04em;}
+  .case-full .ba-notes ul{margin:0; padding-left:18px;}
+  .case-full .ba-notes li{text-align:left; font-size:.95rem; margin-bottom:2px;}
+  @media (max-width:560px){
+    .ba-grid{grid-template-columns:1fr;}
+    .case-full p.ba-head{display:none;}
+    .case-full .ba-cell p.ba-tag{display:block;}
+  }
+  .chart-fig{margin:28px auto; max-width:640px; padding:0;}
+  .sat-chart{display:block; width:100%; height:auto;}
+  .sat-chart .ch-grid{stroke:var(--line); stroke-width:1;}
+  .sat-chart .ch-ax{font-family:var(--font-sans); font-size:13px; fill:var(--ink-soft);}
+  .sat-chart .ch-line{stroke:var(--clay); stroke-width:3; stroke-linecap:round;}
+  .sat-chart .ch-dot{fill:var(--paper); stroke:var(--clay); stroke-width:3;}
+  .sat-chart .ch-val{font-family:var(--font-serif); font-weight:700; font-size:18px; fill:var(--ink);}
+  .sat-chart .ch-delta{font-family:var(--font-sans); font-weight:600; font-size:15px; fill:var(--clay); paint-order:stroke; stroke:var(--paper); stroke-width:5px; stroke-linejoin:round;}
+  .sat-chart .ch-month{font-family:var(--font-sans); font-weight:500; font-size:15px; fill:var(--ink);}
+  .dp-fig{max-width:100%; margin:20px 0;}
+  .dp-svg{display:block; width:100%; height:auto;}
+  .dp-svg .dp-box{fill:var(--teal);}
+  .dp-svg .dp-title{font-family:var(--font-serif); font-weight:700; font-size:17px; fill:#F6F5F0;}
+  .dp-svg .dp-item{font-family:var(--font-sans); font-size:12px; fill:#F6F5F0;}
+  .dp-svg .dp-arrow{stroke:var(--ink-soft); stroke-width:1.6; fill:none;}
+  .dp-svg .dp-loop{stroke:var(--clay); stroke-width:1.8; stroke-dasharray:5 5; fill:none;}
+  .poll-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0;}
+  .poll{margin:0; padding:18px 20px; background:var(--paper-raise); border:1px solid var(--line); border-radius:8px; min-width:0;}
+  .case-full .poll-q{margin:0 0 14px; text-align:left; font-family:var(--font-serif); font-weight:700; font-size:.95rem; line-height:1.4; color:var(--ink);}
+  .poll-row{margin-bottom:10px;}
+  .poll-row:last-child{margin-bottom:0;}
+  .poll-lab{display:flex; justify-content:space-between; gap:10px; font-family:var(--font-sans); font-size:.9rem; color:var(--ink-soft); margin-bottom:3px;}
+  .poll-lab b{color:var(--ink); font-weight:600;}
+  .poll-track{height:12px; background:var(--line); border-radius:6px; overflow:hidden;}
+  .poll-bar{height:100%; background:var(--teal); border-radius:6px;}
+  @media (max-width:560px){ .poll-grid{grid-template-columns:1fr;} }
+  .persona-cards{display:grid; gap:16px; margin:20px 0;}
+  .persona-card{background:var(--paper-raise); border:1px solid var(--line); border-radius:8px; padding:22px 24px;}
+  .persona-head{display:flex; gap:20px; align-items:center; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid var(--line);}
+  .persona-photo{width:110px; height:110px; object-fit:cover; border-radius:50%; flex-shrink:0;}
+  .case-full .persona-name{margin:0 0 6px; text-align:left; font-family:var(--font-serif); font-weight:700; font-size:1.5rem; color:var(--ink);}
+  .case-full .persona-card ul{margin:0; padding-left:18px;}
+  .case-full .persona-card li{text-align:left; margin-bottom:4px;}
+  .case-full .persona-label{margin:0 0 6px; text-align:left; font-family:var(--font-sans); font-weight:600; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase; color:var(--teal);}
+  .case-full .persona-bio{margin:0;}
+  .persona-grid2{display:grid; grid-template-columns:1fr 1fr; gap:22px 28px;}
+  @media (max-width:560px){ .persona-grid2{grid-template-columns:1fr;} .persona-head{flex-direction:column; align-items:flex-start;} }
+  .sev-card{max-width:400px; margin:16px auto 8px; padding:12px 16px; background:var(--paper-raise); border:1px solid var(--line); border-radius:8px; display:grid; gap:8px;}
+  .sev-row{display:flex; align-items:center; gap:10px;}
+  .sev-dot{flex-shrink:0; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-sans); font-weight:600; font-size:.75rem; color:#1E2A27;}
+  .case-full .sev-row p{margin:0; text-align:left; font-size:.85rem; line-height:1.4;}
+  .carousel{
+    display:flex; gap:0; overflow-x:auto; scroll-snap-type:x mandatory;
+    margin:20px 0 10px; padding:4px 0; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; -ms-overflow-style:none;
+    cursor:grab; user-select:none;
+  }
+  .carousel.dragging{cursor:grabbing; scroll-snap-type:none;}
+  .carousel::-webkit-scrollbar{display:none;}
+  .carousel img{
+    flex:0 0 100%; max-width:100%; width:100%; height:auto; max-height:520px;
+    object-fit:contain; scroll-snap-align:center; scroll-snap-stop:always;
+    border-radius:6px; pointer-events:none;
+  }
+  .carousel-dots{display:flex; gap:7px; justify-content:center; margin:0 0 22px;}
+  .carousel-dots button{
+    width:7px; height:7px; padding:0; border:none; border-radius:50%;
+    background:var(--line); cursor:pointer;
+  }
+  .carousel-dots button.active{background:var(--ink);}
+  .img-grid.persona-grid{align-items:flex-start;}
+  .carousel-hint{font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft); text-align:center; margin:-10px 0 20px;}
+  .hint-btn{
+    font-family:var(--font-sans); font-weight:600; font-size:1rem; text-decoration:none;
+    color:var(--clay); border:1.5px solid var(--clay); border-radius:999px;
+    padding:6px 16px; display:inline-block; margin:6px 4px 0;
+    transition:background .15s ease, color .15s ease;
+  }
+  .hint-btn:hover{background:var(--clay); color:var(--paper); border-color:var(--clay);}
+  @media (max-width:560px){
+    .img-grid.cols-2 img, .img-grid.cols-3 img, .img-grid.cols-4 img{flex-basis:100%; max-width:100%;}
+  }
+  blockquote{ margin:24px 0; padding:4px 0 4px 18px; border-left:2px solid var(--clay); font-style:italic; color:var(--ink); max-width:100%; text-align:justify; text-justify:inter-word; }
+
+  @media (max-width:560px){
+    nav{gap:14px; font-size:1rem;}
+    .hero{padding:52px 0 40px;}
+    .hero-flex{flex-direction:column-reverse; gap:28px;}
+    .hero-photo{width:200px; height:200px;}
+    .case{flex-direction:column; align-items:stretch;}
+    .case-thumb{width:100%; height:auto; aspect-ratio:16/10;}
+    section, .case-full{padding:48px 0;}
+  }
+
+  .diagram-scroll{overflow-x:auto; margin:28px 0;}
+  .diagram-scroll svg{display:block; width:100%; min-width:600px; height:auto;}
+
+  .banner-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:center; margin:24px 0 8px;}
+  .banner-grid img{display:block; width:100%; height:auto; border-radius:6px; cursor:zoom-in;}
+  .case-full p.banner-row-label{grid-column:1 / -1; margin:10px 0 -6px; text-align:left; font-family:var(--font-sans); font-weight:600; font-size:1rem; color:var(--ink);}
+  .shot{margin:24px 0; padding:0;}
+  .shot img{display:block; width:100%; height:auto; border-radius:6px; border:1px solid var(--line); cursor:zoom-in;}
+  .case-full figcaption{margin-top:8px; text-align:center; font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--ink-soft);}
+  .tiktok-mockup{max-width:300px; margin:28px auto; cursor:zoom-in;}
+  .video-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px 16px; margin:28px 0;}
+  .video-card{margin:0; padding:0;}
+  .video-card video{display:block; width:100%; aspect-ratio:9 / 16; object-fit:cover; background:#000; border-radius:8px;}
+  .case-full .video-card figcaption{margin-top:8px;}
+  @media (max-width:560px){ .video-grid{grid-template-columns:repeat(2,1fr);} }
+  .lightbox{position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.84); display:flex; align-items:center; justify-content:center; padding:56px 20px 24px;}
+  .lightbox img{max-width:100%; max-height:100%; object-fit:contain; border-radius:8px;}
+  .lightbox .lb-close{position:absolute; top:12px; right:12px; width:44px; height:44px; border-radius:50%; border:none; background:#fff; color:#1E2A27; font-size:26px; line-height:1; cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,.3);}
+  .case-full p.banner-col-label{margin:0; text-align:center; font-family:var(--font-sans); font-weight:600; font-size:1rem; color:var(--teal);}
+
+  /* ---- in-page editor (owner only) ---- */
+  #edit-ui{position:fixed; right:16px; bottom:16px; z-index:1000; display:none; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end; font-family:var(--font-sans);}
+  #edit-ui.ready{display:flex;}
+  #edit-ui button{font-family:var(--font-sans); font-weight:600; font-size:1rem; border-radius:999px; padding:10px 20px; cursor:pointer; border:1.5px solid var(--clay); background:var(--paper); color:var(--clay); box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  #edit-ui button.primary{background:var(--clay); color:var(--paper);}
+  #edit-ui button:disabled{opacity:.6; cursor:default;}
+  #edit-ui .msg{font-size:1rem; font-weight:500; background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:999px; padding:8px 16px;}
+  body.editing [contenteditable="true"]{outline:1px dashed var(--clay); outline-offset:3px; cursor:text;}
+  body.editing [contenteditable="true"]:focus{outline:2px solid var(--clay); background:rgba(193,84,47,.07);}
+  .lang{display:inline-flex; gap:6px; align-items:center; color:var(--ink-soft); font-size:.9rem;}
+  .lang a{border-bottom:none; padding:0; text-decoration:none;}
+  .lang a.cur{color:var(--ink); font-weight:700;}
+  @media (max-width:560px){ header .wrap{flex-wrap:wrap; gap:6px 12px;} nav{flex-wrap:wrap;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Carla Álvaro</a>
+    <nav>
+      <a href="#cases">Case studies</a>
+      <a href="#about-page">About</a>
+      <a href="#contact">Contact</a>
+    <span class="lang"><a class="cur" aria-current="true">EN</a><span aria-hidden="true">|</span><a id="lang-other" href="es.html" hreflang="es">ES</a></span>
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+<section class="hero">
+  <div class="wrap hero-flex">
+    <div class="hero-text">
+      <p class="kicker">UX · AI · End-to-end</p>
+      <h1>Carla Álvaro</h1>
+      <p class="lede">I'm a Content Designer specialized in UX Writing. I combine words, research and design to create clear, user-centered experiences. At Miravia and SEAT, I've improved user journeys through content and usability insights.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="https://drive.google.com/file/d/1tIa5cZ-UMAHggUvdyD-2LD3qHiWCiBeO/view?usp=drive_link" target="_blank" rel="noopener">Check CV</a>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="assets/img000.jpg" alt="Carla Álvaro"></div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">01</p>
+      <h2>Selected work</h2>
+    </div>
+
+    <div class="case">
+      <div class="case-thumb"><img src="assets/img001.png" alt="La Portería card thumbnail"></div>
+      <div class="case-body">
+        <div class="case-top"><h3><a href="#case-porteria">La Portería: gamifying the World Cup</a></h3></div>
+        <p>Content design for a football-themed minigame across game flow, campaign banners and push/CRM notifications in three languages, driving €125.6K in campaign GMV.</p>
+        <div class="tags"><span class="tag">Content design</span><span class="tag">Localization</span><span class="tag">Gamification</span></div>
+        <a class="read" href="#case-porteria">Read case →</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-thumb"><img src="assets/img002.png" alt="AI chatbot agent card thumbnail"></div>
+      <div class="case-body">
+        <div class="case-top"><h3><a href="#case-chatbot">Optimizing a chatbot with an AI agent</a></h3></div>
+        <p>Content audit and AI agent built to correct and optimize a chatbot's questions and answers at scale, raising its satisfaction rate by more than 10 percentage points.</p>
+        <div class="tags"><span class="tag">Content audit</span><span class="tag">AI agent</span><span class="tag">Content design</span></div>
+        <a class="read" href="#case-chatbot">Read case →</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-thumb"><img src="assets/img003.png" alt="Miravia Trends card thumbnail"></div>
+      <div class="case-body">
+        <div class="case-top"><h3><a href="#case-trends">Trend Radar: weekly trends into content</a></h3></div>
+        <p>Banners, imagery and content for an editorial-style trends section on web and app, plus the creation and management of AI-generated content for the TikTok account to bring users into it.</p>
+        <div class="tags"><span class="tag">Content design</span><span class="tag">AI video</span><span class="tag">Social content</span></div>
+        <a class="read" href="#case-trends">Read case →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="other-projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">02</p>
+      <h2>Personal projects</h2>
+    </div>
+
+    <div class="case">
+      <div class="case-thumb"><img src="assets/img004.png" alt="Go Together app mockups"></div>
+      <div class="case-body">
+        <div class="case-top"><h3><a href="#case-go-together">Go Together: a carpooling app</a></h3></div>
+        <p>A data-driven carpooling app built from scratch for the university community, leveraging deep UX Research and integrating strategic microcopy to design a safe, sustainable and trust-based solution.</p>
+        <div class="tags"><span class="tag">UX Research</span><span class="tag">UX Writing</span><span class="tag">Built a Design System from scratch</span></div>
+        <a class="read" href="#case-go-together">Read case →</a>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-thumb"><img src="assets/img005.png" alt="Zebra&amp;Maduixa redesign"></div>
+      <div class="case-body">
+        <div class="case-top"><h3><a href="#case-zebra">Redesign of a fashion e-commerce</a></h3></div>
+        <p>Strategic and heuristic-driven redesign of an online clothing store, focused on optimizing the user journey for better conversion and a seamless shopping experience.</p>
+        <div class="tags"><span class="tag">User testing</span><span class="tag">Heuristic analysis</span><span class="tag">Redesigned the website</span></div>
+        <a class="read" href="#case-zebra">Read case →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article id="about-page" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#top">← Back to home</a>
+    <h2 class="title" style="margin-top:20px;">About me</h2>
+    <p>Hello, I'm Carla!</p>
+    <p>I'm a Content Designer with a background in UX and Translation &amp; Interpreting, specialized in creating clear, user-centered content and improving digital product experiences.</p>
+    <p>Over the past few years, I've worked on digital products for companies such as Google, Apple, SEAT and Miravia, creating and localizing content in Spanish and Catalan. My experience in localization and terminology management has given me a strong eye for consistency, clarity and detail, as well as solid analytical and linguistic skills.</p>
+    <p>As a Content Designer, I collaborate closely with product designers, product owners and developers to improve user flows and shape the content across digital interfaces. I've worked on microcopy, user journeys, usability testing, content guidelines and AI-powered content workflows, always considering the user, the product context and the overall experience.</p>
+    <p>I particularly enjoy finding the right words to make digital experiences clearer and more intuitive, while combining content, design and user insights to solve real product problems.</p>
+    <div class="img-grid cols-2" style="max-width:420px; margin:24px auto;"><img src="assets/img059.jpg" alt="Carla Álvaro outdoors with a flower in her hair"><img src="assets/img060.jpg" alt="Carla Álvaro standing in a park"></div>
+
+    <div class="contact-card" style="margin-top:60px;">
+      <p class="kicker" style="justify-content:center;">contact</p>
+      <h2 class="talk-title">Let's talk</h2>
+      <div class="contact-links">
+        <a href="mailto:c.alvaro.garcia@gmail.com">c.alvaro.garcia@gmail.com</a>
+        <a href="https://www.linkedin.com/in/carla-alvaro-3396191b0/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1tIa5cZ-UMAHggUvdyD-2LD3qHiWCiBeO/view" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <p class="kicker" style="justify-content:center;">contact</p>
+      <h2 class="talk-title">Let's talk</h2>
+      <div class="contact-links">
+        <a href="mailto:c.alvaro.garcia@gmail.com">c.alvaro.garcia@gmail.com</a>
+        <a href="https://www.linkedin.com/in/carla-alvaro-3396191b0/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1tIa5cZ-UMAHggUvdyD-2LD3qHiWCiBeO/view" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </div>
+    <p class="fineprint" style="text-align:center;">© 2026 Carla Álvaro</p>
+  </div>
+</footer>
+
+<article id="case-go-together" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#cases">← Back to case studies</a>
+    <h2 class="title" style="margin-top:20px;">Go Together: carpooling with confidence</h2>
+    <div class="meta">
+      <div>ROLE<b>UX/UI Designer &amp; UX Writer</b></div>
+      <div>DURATION<b>12 weeks</b></div>
+      <div>TOOLS<b>Figma, NotebookLM, Copilot</b></div>
+    </div>
+
+    <img class="case-img" src="assets/img006.png" alt="Go Together app screens collage">
+
+    <h4>1. Context</h4>
+    <p>In response to the current rail crisis in Spain, and seeing so many young people struggling to get to university on time, I decided to design an app for students at the Autonomous University of Barcelona who live in my city and have to commute daily. The goal was to create an app that would allow students to carpool to and from university.</p>
+    <p>As the UX/UI Designer &amp; UX Writer, my role combined strategy, research, product and content design.</p>
+
+    <h4>2. Design process</h4>
+    <figure class="chart-fig dp-fig"><svg class="dp-svg" viewBox="0 0 800 200" role="img" aria-label="Design process: Discover, Define, Ideate, Design, Test, with iteration loops back to Ideate"><defs><marker id="dpa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="var(--ink-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></marker><marker id="dpl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="var(--clay)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></marker></defs><rect class="dp-box" x="10" y="84" width="140" height="104" rx="12"></rect><text class="dp-title" x="80.0" y="114" text-anchor="middle">Discover</text><text class="dp-item" x="80.0" y="138" text-anchor="middle">User research</text><text class="dp-item" x="80.0" y="156" text-anchor="middle">User interviews</text><text class="dp-item" x="80.0" y="174" text-anchor="middle">Competitive analysis</text><path class="dp-arrow" d="M153 136.0 H165" marker-end="url(#dpa)"></path><rect class="dp-box" x="170" y="84" width="140" height="104" rx="12"></rect><text class="dp-title" x="240.0" y="114" text-anchor="middle">Define</text><text class="dp-item" x="240.0" y="138" text-anchor="middle">User persona</text><text class="dp-item" x="240.0" y="156" text-anchor="middle">Empathy map</text><text class="dp-item" x="240.0" y="174" text-anchor="middle">Journey map</text><path class="dp-arrow" d="M313 136.0 H325" marker-end="url(#dpa)"></path><rect class="dp-box" x="330" y="84" width="140" height="104" rx="12"></rect><text class="dp-title" x="400.0" y="114" text-anchor="middle">Ideate</text><text class="dp-item" x="400.0" y="138" text-anchor="middle">Data analysis</text><text class="dp-item" x="400.0" y="156" text-anchor="middle">User flows</text><text class="dp-item" x="400.0" y="174" text-anchor="middle">Information architecture</text><path class="dp-arrow" d="M473 136.0 H485" marker-end="url(#dpa)"></path><rect class="dp-box" x="490" y="84" width="140" height="104" rx="12"></rect><text class="dp-title" x="560.0" y="114" text-anchor="middle">Design</text><text class="dp-item" x="560.0" y="138" text-anchor="middle">UX Writing</text><text class="dp-item" x="560.0" y="156" text-anchor="middle">Wireframing</text><text class="dp-item" x="560.0" y="174" text-anchor="middle">Visual design</text><path class="dp-arrow" d="M633 136.0 H645" marker-end="url(#dpa)"></path><rect class="dp-box" x="650" y="84" width="140" height="104" rx="12"></rect><text class="dp-title" x="720.0" y="114" text-anchor="middle">Test</text><text class="dp-item" x="720.0" y="138" text-anchor="middle">Usability testing</text><text class="dp-item" x="720.0" y="156" text-anchor="middle">A/B testing</text><text class="dp-item" x="720.0" y="174" text-anchor="middle">Iteration</text><path class="dp-loop" d="M720.0 80 V18 H378.0 V76" marker-end="url(#dpl)"></path><path class="dp-loop" d="M560.0 80 V50 H422.0 V76" marker-end="url(#dpl)"></path></svg></figure>
+
+    <h4>3. Research</h4>
+    <p>I began by conducting a competitive analysis and developing several hypotheses. To validate them, I carried out a survey to obtain <strong>quantitative data</strong>, such as the percentage of students dissatisfied with the train service or the percentage of students who have a driver's license and their own vehicle. I also interviewed five students to gather <strong>qualitative data</strong>, such as the frustration, fear, and insecurity they feel about the current situation. The insights gathered allowed me to validate my hypotheses and deeply understand the needs and pain points of the student community.</p>
+    <p>I also did some <strong>benchmarking</strong> to detect opportunities and get inspired.</p>
+    <p>Find below a few examples of the questions asked in the survey. As you can see, <strong>90.5% of students think that the train service (Rodalies) is deficient</strong> and <strong>100% of them would always use a car to go to university</strong>.</p>
+    <div class="poll-grid"><figure class="poll"><p class="poll-q">How would you define the service of Rodalies (R4)?</p><div class="poll-row"><div class="poll-lab"><span>Deficient</span><b>90.5%</b></div><div class="poll-track"><div class="poll-bar" style="width:90.5%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>Regular</span><b>9.5%</b></div><div class="poll-track"><div class="poll-bar" style="width:9.5%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>Good</span><b>0%</b></div><div class="poll-track"><div class="poll-bar" style="width:0%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>Excellent</span><b>0%</b></div><div class="poll-track"><div class="poll-bar" style="width:0%"></div></div></div></figure><figure class="poll"><p class="poll-q">Are you tired of relying on public transport to get to and from university?</p><div class="poll-row"><div class="poll-lab"><span>Yes</span><b>85.7%</b></div><div class="poll-track"><div class="poll-bar" style="width:85.7%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>No</span><b>14.3%</b></div><div class="poll-track"><div class="poll-bar" style="width:14.3%"></div></div></div></figure><figure class="poll"><p class="poll-q">Do you own a car?</p><div class="poll-row"><div class="poll-lab"><span>Yes</span><b>10.5%</b></div><div class="poll-track"><div class="poll-bar" style="width:10.5%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>No</span><b>47.4%</b></div><div class="poll-track"><div class="poll-bar" style="width:47.4%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>Sometimes</span><b>42.1%</b></div><div class="poll-track"><div class="poll-bar" style="width:42.1%"></div></div></div></figure><figure class="poll"><p class="poll-q">If you could, would you always go to and from university by car?</p><div class="poll-row"><div class="poll-lab"><span>Yes</span><b>100%</b></div><div class="poll-track"><div class="poll-bar" style="width:100%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>No</span><b>0%</b></div><div class="poll-track"><div class="poll-bar" style="width:0%"></div></div></div><div class="poll-row"><div class="poll-lab"><span>I don't know</span><b>0%</b></div><div class="poll-track"><div class="poll-bar" style="width:0%"></div></div></div></figure></div>
+
+    <h4>4. Ideation</h4>
+    <p>After collecting and analyzing the data, the ideation and definition process began. At this point, I created the <strong>user persona</strong> using the data obtained and I also considered different scenarios for an <strong>MVP</strong> (How Might We). I brainstormed, noted, and defined several ideas, and analyzed them to verify their feasibility. Then I created a journey map, which helped me uncover <strong>pain points</strong> and <strong>opportunities</strong>.</p>
+    <p>Once I had defined the value proposition, I began to design the different <strong>user flows</strong> needed to create the MVP.</p>
+    <p>Some of the <strong>pain points</strong> detected were:</p>
+    <ul>
+      <li>Frustration at not finding alternatives to public transport.</li>
+      <li>Scheduling conflicts among existing social circles prevent students from carpooling with friends.</li>
+      <li>Lack of security when carpooling with unknown people.</li>
+    </ul>
+    <p>These pain points became <strong>opportunities</strong>:</p>
+    <ul>
+      <li>Invest in advertising to convey trustworthiness.</li>
+      <li>Conduct surveys to registered users to find out what they need.</li>
+      <li>Require all profiles to be verified and to have a profile picture, phone number, and a description to increase confidence.</li>
+      <li>Offer discounts for posting reviews.</li>
+      <li>Satisfaction survey after each trip in order to rate users and increase security.</li>
+    </ul>
+    <p>Alba Riera was the user persona created to empathize with the actual problem.</p>
+<div class="persona-cards">
+      <div class="persona-card">
+        <div class="persona-head">
+          <img class="persona-photo" src="assets/persona-alba.jpg" alt="Alba Riera, user persona">
+          <div>
+            <p class="persona-name">Alba Riera</p>
+            <ul class="persona-facts"><li>20 years old</li><li>UAB student</li><li>Manresa</li></ul>
+          </div>
+        </div>
+        <p class="persona-label">Bio</p>
+        <p class="persona-bio">Alba is 20 years old and a second-year Translation and Interpreting student at the Autonomous University of Barcelona (UAB). She lives with her parents and younger sister in an apartment in the old town of Manresa. Although she has had her driver's license for a year, she doesn't have her own car to use whenever she needs it, as the cars at home belong to her parents. In addition to her university studies, she has a part-time job as a waitress that allows her to earn money for her expenses. She loves to travel, watch series on Netflix, and spend time with her friends.</p>
+      </div>
+      <div class="persona-card persona-grid2">
+        <div><p class="persona-label">Interests</p><ul><li>Arriving on time to university classes.</li><li>Meet people who make the same journeys every day/week.</li></ul></div>
+        <div><p class="persona-label">Expectations</p><ul><li>Not wasting so much time on public transport.</li><li>Stop being anxious about not knowing if the train will come or not.</li></ul></div>
+        <div><p class="persona-label">Goals</p><ul><li>Go to university by car.</li><li>Freedom of movement.</li></ul></div>
+        <div><p class="persona-label">Frustrations</p><ul><li>Not having an own vehicle to use whenever she wants.</li></ul></div>
+      </div>
+    </div>
+
+    <h4>5. Mid-fidelity wireframing</h4>
+    <p>After collecting all the data and defining the user persona, it was time to design the expected <strong>user flows</strong> for an MVP. To do so, I had to define the architecture of information.</p>
+    <p>I mapped out 7 core user flows, focusing on the most critical journeys:</p>
+    <ul>
+      <li>Onboarding</li><li>Registration</li><li>Offering a trip</li><li>Searching for a trip</li>
+      <li>Main view of the "Trips" section</li><li>Main view of the "Messages" section</li><li>Main view of the "Profile" section</li>
+    </ul>
+    <p>Given the complexity of these flows, I prioritized a clear information architecture to reduce the user's cognitive load. Below, you can explore the refined logic of the "Offering a trip" and "Searching for a trip" flows:</p>
+    <img class="case-img" src="assets/img014.png" alt="User flow: offering a trip"><img class="case-img" src="assets/img015.png" alt="User flow: searching for a trip"><p class="carousel-hint" style="margin-top:4px;"><a href="https://www.figma.com/design/FGFmmOOijZiJBn0ePKfY8l/Go-Together?node-id=1-4&amp;t=9vEi8mllRJN1koNT-1" target="_blank" rel="noopener" class="hint-btn">View full user flows on Figma</a></p>
+    <p>Once I had the minimum user flows defined for an MVP, it was the turn to start designing mid-fidelity wireframes. At this point, it was crucial to start defining a tone and style, as well as deciding the name of each section in the tab bar.</p>
+<div class="carousel">    <img class="case-img" src="assets/img016.png" alt="Mid-fidelity screens: trip confirmation, messages, profile"><img class="case-img" src="assets/img017.png" alt="Mid-fidelity screens: sign up, phone verification, profile verification"><img class="case-img" src="assets/img018.png" alt="Mid-fidelity screens: welcome, search a trip, location permission, date picker"><img class="case-img" src="assets/img019.png" alt="Mid-fidelity screens: searching matches, no matches, trip results, trip detail"><img class="case-img" src="assets/img020.png" alt="Mid-fidelity screens: booking confirmed, towns added, return price, automatic booking"></div>
+
+    <h4>6. UX Writing</h4>
+    <p>Strategic content design was a fundamental challenge in aligning the interface with the university-based target audience. My goal was to establish a voice and tone that felt close, empathetic, and reliable.</p>
+    <p>The most critical task was the <strong>onboarding flow</strong>, where I had to condense the value proposition and core objectives into just three screens to avoid user saturation.</p>
+    <ul>
+      <li><strong>Screen 1:</strong> I decided to lead with the phrase "Olvídate de los transbordos" (<em>Forget about transfers</em> in English), directly addressing the primary pain point discovered in my survey: deep dissatisfaction with the current train service.</li>
+      <li><strong>Screen 2:</strong> This screen focuses on building a safe community. Since trust was identified as a major barrier during the journey mapping process, the copy emphasizes verified profiles to reduce user anxiety.</li>
+      <li><strong>Screen 3:</strong> Here I highlighted the dual benefits of sustainability and savings, two of the project's main pillars.</li>
+    </ul>
+    <p>Finally, to trigger a positive visceral response and convey movement, I chose the copy "<strong>¡Vámonos!</strong>" (<em>Let's go!</em> in English) as the primary CTA. This choice replaces generic navigation with a more dynamic and engaging invitation to join the community.</p>
+    <img class="case-img" src="assets/img021.png" alt="Final onboarding screens">
+    <p>For the sign-up screen, I designed a heading focused on the platform's primary economic advantage: <strong>savings</strong>. I selected the copy "<strong>Regístrate ahora y empieza a ahorrar</strong>" (<em>Register now and start saving</em> in English) to immediately communicate the core value proposition to the student, encouraging conversion through a clear personal benefit.</p>
+    <p>One of the most nuanced decisions was selecting the right term for the <em>women-only</em> trip feature. My goal was to provide a safe space while maintaining an inclusive tone that resonated with the diverse university community:</p>
+    <ul>
+      <li><strong>"Mujeres" (Women)</strong> was discarded for being too formal and distant for the core 18–28 age demographic.</li>
+      <li><strong>"Chicas" (Girls)</strong> was avoided to prevent a tone that could be perceived as infantilizing or exclusionary for mature students.</li>
+      <li><strong>"Estudiantes" (Students)</strong> lacked the necessary gender specificity in Spanish to clearly define a female-only environment, as the word is spelled the same for both masculine and feminine.</li>
+    </ul>
+    <p>Finally, I ultimately selected the term "<strong>compañeras</strong>" (<em>female peers</em> or <em>classmates</em>) because it successfully bridges the age gap between younger and older students while reinforcing a sense of community and safety.</p>
+    <img class="case-img" style="max-width:440px;" src="assets/img022.png" alt="Registration screen and Compañeras women-only trip screen">
+    <p>Another critical UX Writing decision involved selecting the most effective terminology for the daily commute. While "viajes" (<em>trips</em>) is common in carpooling, my research revealed it often evokes leisure or vacation vibes, which contradicted the practical, routine nature of the Go Together service. I chose "<strong>trayecto</strong>" (<em>journey</em>) as a more professional and accurate alternative. Despite concerns regarding visual hierarchy and screen real estate due to the word's length, user validation confirmed that "trayecto" was the most resonant term. This decision aligns with the app's mission to connect students through efficient, shared daily routes.</p>
+
+    <h4>7. Design system</h4>
+    <p>After validating the mid-fidelity wireframes, the next step was starting to build a design system from scratch. Here you can see some elements from the final Style Guide and Components library.</p>
+<div class="carousel"><img class="case-img" src="assets/img023.png" alt="Style guide: colors, typography and radius"><img class="case-img" src="assets/img024.png" alt="Style guide: cards, tab bar and buttons"><img class="case-img" src="assets/img025.png" alt="Style guide: components, modals, icons, avatars, illustrations"></div>
+
+    <h4>8. High-fidelity wireframing</h4>
+    <p>Here you can see some high-fidelity screens ready to be developed. I used the plugin Able to make sure that colors meet the contrast ratios for the app to be inclusive.</p>
+    <div class="carousel"><img src="assets/img026.png" alt="Hi-fi screens: trip published, my trips, messages"><img src="assets/img027.png" alt="Hi-fi screens: sign up, log in, welcome"><img src="assets/img028.png" alt="Hi-fi screens: home, profile, location permission"><img src="assets/img029.png" alt="Hi-fi screens: date picker, trip results, booking confirmed"><img src="assets/img030.png" alt="Hi-fi screens: no matches, price, automatic booking"></div><p class="carousel-hint" style="text-align:center;"><a href="https://www.figma.com/proto/FGFmmOOijZiJBn0ePKfY8l/Go-Together?node-id=154-4279&amp;p=f&amp;viewport=-483%2C394%2C0.19&amp;t=9vEi8mllRJN1koNT-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=154%3A8634&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="hint-btn">"Offering a trip" prototype</a> <a href="https://www.figma.com/proto/FGFmmOOijZiJBn0ePKfY8l/Go-Together?node-id=154-4279&amp;p=f&amp;viewport=-483%2C394%2C0.19&amp;t=9vEi8mllRJN1koNT-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=154%3A7845&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="hint-btn">"Searching for a trip" prototype</a></p>
+
+    <h4>9. Key learnings</h4>
+    <p>Creating a digital product isn't just about building features: it's about building trust, consistency, and shared understanding.</p>
+    <p>Go Together taught me how important it is to make the effort of setting the foundations and make sure the product is cohesive, while making design stand out for collaboration and growth.</p>
+    <p>I want to continue working on this project so that one day it becomes a real developed app. Future iterations will focus on integrating a rating system and refining the booking flow based on real-world usability testing. Stay tuned if you are interested 🙂</p>
+
+    <p class="cta-center"><a class="btn btn-primary" href="#contact">Let's work together</a></p>
+  </div>
+</article>
+
+<article id="case-zebra" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#cases">← Back to case studies</a>
+    <h2 class="title" style="margin-top:20px;">Redesign of a clothing store website</h2>
+    <div class="meta">
+      <div>ROLE<b>UX Designer &amp; UX Writer</b></div>
+      <div>DURATION<b>8 weeks</b></div>
+      <div>TOOLS<b>Figma, Whimsical</b></div>
+    </div>
+
+    <h4>1. Context</h4>
+    <p>Zebra&amp;Maduixa is a successful local boutique that expanded into e-commerce to reach a wider audience. Despite the physical store's popularity, their online performance was underperforming. To identify the barriers to conversion, I conducted <strong>moderated usability tests</strong> and a <strong>heuristic evaluation</strong>. My research revealed that <strong>65% of users felt confused during the checkout process</strong>, and <strong>45% struggled with the navigation menu</strong>. This project focused on redesigning the homepage and information architecture to build trust and simplify the shopping journey.</p>
+
+    <h4>2. Heuristic evaluation findings</h4>
+    <p>The following section outlines the <strong>key usability issues</strong> identified through a heuristic evaluation based on Jakob Nielsen's 10 principles. To effectively prioritize the redesign, each issue has been categorized using a severity scale, focusing on high-impact solutions that improve the overall user experience.</p>
+    <div class="sev-card"><div class="sev-row"><span class="sev-dot" style="background:#8FE388">1</span><p><strong>Cosmetic problem:</strong> no need to be fixed unless extra time is available.</p></div><div class="sev-row"><span class="sev-dot" style="background:#EDE56B">2</span><p><strong>Minor usability problem:</strong> fixing this should be given low priority.</p></div><div class="sev-row"><span class="sev-dot" style="background:#F28C3C">3</span><p><strong>Major usability problem:</strong> important to fix, high priority.</p></div><div class="sev-row"><span class="sev-dot" style="background:#E8412B">4</span><p><strong>Usability catastrophe:</strong> imperative to fix this.</p></div></div><div class="carousel"><img class="case-img" src="assets/img032.png" alt="Heuristic evaluation — aesthetic and minimalist design"><img class="case-img" src="assets/img033.png" alt="Heuristic evaluation — consistency and standards, recognition rather than recall"><img class="case-img" src="assets/img034.png" alt="Heuristic evaluation — match between the system and the real world"><img class="case-img" src="assets/img035.png" alt="Heuristic evaluation — user control and freedom, help and documentation, error prevention"></div>
+
+    <h4>3. User research and analysis</h4>
+    <p>To build a data-driven design, I conducted a deep user research to identify the main friction points and usability barriers of the current website. My goal was to understand the users' needs and motivations to ensure a more efficient and satisfactory shopping experience.</p>
+    <ul>
+      <li><strong>Moderated usability testing:</strong> I carried out moderated usability tests with real users to observe their behavior in a controlled environment. I asked them to perform tasks on the webpage, such as buying clothes, finding a concrete section or looking for help pages. I observed them without giving them any hints, and the findings were critical: 65% of users felt confused during the checkout process, and 45% struggled to understand the items in the navigation menu. These results validated my hypothesis that the existing information architecture was a major barrier to conversion.</li>
+      <li><strong>Card sorting for information architecture:</strong> To address the navigation issues, I implemented the card sorting technique. This allowed me to map the users' mental models and find patterns in how they naturally categorize clothing. As a result, I redefined the menu by replacing internal collection names with familiar, user-friendly terms (e.g., changing "ceremonia" to "vestidos"), ensuring an intuitive and "invisible" navigation.</li>
+      <li><strong>Competitive benchmarking:</strong> I performed a benchmarking analysis of several leading websites in the fashion sector, such as Inditex websites for shops like Bershka, Pull&amp;Bear and Stradivarius. By studying the competition, I identified industry best practices and strategic opportunities to improve the brand's digital presence. This research was essential to ensure that the redesign followed established consistency and standards, making the platform feel both modern and reliable for the customer.</li>
+    </ul>
+
+    <h4>4. Mid-fidelity wireframing</h4>
+    <p>Following the research and analysis phase, I transitioned to the <strong>mid-fidelity wireframing</strong> process. The primary objective was to translate the insights gathered into a structural "skeleton" that defines the content and functionality of the interface. During this stage, I focused on the <strong>strategic positioning</strong> of key interactive elements — such as the search bar, tab bar, and navigation menu — to establish a clear <strong>visual hierarchy</strong> and reduce the user's cognitive load.</p>
+    <p>This phase was instrumental in applying the information architecture defined through my card sorting sessions, ensuring that the navigation is intuitive and aligns with the users' mental models. By working in black and white, I prioritized usability and layout over aesthetics, allowing for early iteration and efficient problem-solving before moving to the high-fidelity design phase.</p>
+    <img class="case-img" style="max-width:420px;" src="assets/img036.png" alt="Homepage wireframe used to validate the structure before the final redesign">
+
+    <h4>5. Strategic redesign and key improvements</h4>
+    <p>Transforming usability barriers into high-impact solutions. This comparison highlights strategic improvements in navigation, user control, and verbal usability, ensuring the interface is not only functional but also communicates the brand's sophisticated identity.</p>
+    <img class="case-img" src="assets/img037.png" alt="Old vs. new — homepage comparison">
+    <ul>
+      <li>Optimized the information architecture by replacing internal collection names (e.g., "ceremonia") with user-centered terminology (e.g., "vestidos"). This alignment with users' mental models reduces cognitive load and ensures a more intuitive navigation experience.</li>
+      <li>Enhanced the findability of the "Help" section ("Ayuda") by integrating it into the primary navigation bar. This strategic placement ensures instant access to support, minimizing user friction during the shopping journey.</li>
+      <li>Repositioned the search bar to a central, high-visibility area to improve accessibility and efficiency. Following Fitts's Law, this change facilitates rapid product discovery, making the search function a primary tool for the user.</li>
+      <li>Elevated the visual identity with a sophisticated color palette and refined typography. This new aesthetic not only reflects the brand's positioning in the elegant event wear market but also reinforces user trust through a cohesive and professional interface.</li>
+    </ul>
+    <img class="case-img" src="assets/img038.png" alt="Old vs. new — menu and homepage layout">
+    <ul>
+      <li>Transformed the cluttered homepage — originally overwhelmed by excessive banners and information — into a minimalist design. By applying the KISS principle, I prioritized essential elements like categories and featured products, significantly reducing the user's cognitive load.</li>
+      <li>Replaced the static physical address ("placeholder address") with a clear, action-oriented CTA ("Cómo llegar"). This improvement enhances verbal usability, making the interaction more intuitive and efficient for users intending to visit the store.</li>
+      <li>Integrated a dedicated "Help" section before the footer to improve the findability of FAQs and essential site information. This strategic placement ensures that support is always accessible, enhancing overall user satisfaction and trust.</li>
+    </ul>
+    <img class="case-img" src="assets/img039.png" alt="Old vs. new — login flow">
+    <ul>
+      <li>The original "Log in" button redirected users to a new tab, causing a significant disruption in the interaction flow. To preserve user control and freedom, I replaced this with a pop-up overlay. This allows users to authenticate without losing their context on the site, effectively reducing cognitive load. Additionally, I integrated multiple sign-in options to simplify the process and enhance efficiency.</li>
+      <li>I improved the site's verbal usability by replacing the non-standard term "Refinar" with "Filtrar" (<em>Filter</em>). This change adheres to the heuristic of consistency and standards, aligning the interface with the users' mental models and established e-commerce conventions.</li>
+    </ul>
+
+    <h4>6. High-fidelity wireframing</h4>
+    <p>In the final stage of the project, I transitioned to <strong>high-fidelity wireframing</strong> to bring the interface to life by incorporating color, imagery, and definitive design elements. These high-fidelity screens represent the final balance between form and function. Every visual choice, from the hierarchy of the typography to the placement of interactive components, was designed to make the shopping experience seamless, reliable, and emotionally engaging for the customer.</p>
+    <div class="carousel"><img class="case-img" src="assets/img040.jpg" alt="Hi-fi screen — homepage"><img class="case-img" src="assets/img041.jpg" alt="Hi-fi screen — menu"><img class="case-img" src="assets/img042.jpg" alt="Hi-fi screen — login"></div><p class="carousel-hint" style="text-align:center;"><a href="https://www.figma.com/proto/HFDfOy1Q7REd8KntBpnYaA/Redise%C3%B1o-Home-Zebra?page-id=0%3A1&amp;node-id=1-2&amp;starting-point-node-id=1%3A2&amp;t=NFj5QtkW2aAI2UJb-1" target="_blank" rel="noopener" class="hint-btn">see it prototyped on Figma</a></p>
+
+    <h4>7. Key learnings</h4>
+    <p>This project reinforced that effective design must adapt to the user's mental models, not the other way around. Also, by replacing internal jargon with familiar terminology, I learned that aligning the interface with the user's real-world language is essential for creating an "invisible" and intuitive experience.</p>
+    <p>Moreover, I discovered that listening to users' real pain points is the only way to build a trust-based interface that successfully bridges the gap between business goals and user needs.</p>
+    <p>In conclusion, real-world frustrations are the best roadmap for innovation.</p>
+
+    <p class="cta-center"><a class="btn btn-primary" href="#contact">Let's work together</a></p>
+  </div>
+</article>
+
+<article id="case-chatbot" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#cases">← Back to case studies</a>
+    <h2 class="title" style="margin-top:20px;">Optimizing chatbot with an AI agent</h2>
+    <div class="meta">
+      <div>ROLE<b>Content Designer</b></div>
+      <div>DURATION<b>3 weeks to build the tool</b></div>
+      <div>TOOLS<b>One Day (internal AI tool)</b></div>
+    </div>
+
+    <h4>1. Context</h4>
+    <p>Miravia's customer care team noticed that the satisfaction rate of the app's chatbot was dropping significantly. Users were increasingly dissatisfied with the answers and the help they received when trying to solve order-related issues. The team asked for support, so I carried out a content audit of the chatbot's questions and answers and built an AI agent to correct and optimize them at scale.</p>
+
+    <h4>2. Content audit</h4>
+    <p>Before designing any solution, I manually analyzed every question and answer in the chatbot. The audit revealed that the content was far from meeting quality standards:</p>
+    <ul>
+      <li><strong>Wrong language variant:</strong> the content was written in Latin American Spanish instead of European Spanish, which did not match our users in Spain.</li>
+      <li><strong>Internal terminology:</strong> many answers used internal company jargon that users could not understand.</li>
+      <li><strong>Typos and serious errors:</strong> including spelling mistakes and incorrect wording.</li>
+      <li><strong>Punctuation issues:</strong> inconsistent or incorrect use of punctuation.</li>
+    </ul>
+    <p>These findings validated my hypothesis that the quality of the content was a major factor behind the drop in satisfaction.</p>
+    <p>In total, I reviewed <strong>208 question-and-answer pairs</strong> to draw these conclusions and to start preparing the prompts I would later use to create the agent.</p>
+
+    <h4>3. Defining the guidelines</h4>
+    <p>To make the correction consistent, I turned the audit findings into a quick reference guide organized in four blocks: language, format, tone and style, and terminology. Some examples of the rules I defined in each one:</p>
+    <ul>
+      <li><strong>Language:</strong> always European Spanish, never Latin American; informal register ("tú", never "usted"); present perfect for recent past actions ("ha llegado" (<em>has arrived</em>), not "llegó" (<em>arrived</em>)); and consistent vocabulary, such as "caducar" instead of "expirar", "cantidad" instead of "monto", "añadir" instead of "agregar" and "embalar" instead of "empacar".</li>
+      <li><strong>Format:</strong> single quotation marks for app sections and double quotation marks only to quote the user's text; bold for key elements; numerals instead of spelled-out numbers; the € symbol without a space ("3,89€"); a period as the thousands separator ("15.000") and a comma for decimals ("2,45"); and no final period in titles.</li>
+      <li><strong>Tone and style:</strong> concise, without redundancies or filler words; positive language, avoiding starting a sentence with "No"; active voice; first person plural when speaking as Miravia; no unnecessary technical jargon; and never changing the original UI options.</li>
+      <li><strong>Terminology:</strong> a shared set of terms that match how users speak, such as "atención al cliente" (not "Servicio al Cliente"), "artículo" instead of "producto", "empresa de mensajería" instead of "socio logístico", "días laborables" instead of "días hábiles" and "método de pago" instead of "medio de pago".</li>
+    </ul>
+
+    <h4>4. Building the AI agent</h4>
+    <p>Over three weeks, I created an agent with One Day, Miravia's internal AI tool. Its job is to receive question-and-answer pairs (optionally with a CTA) and return them corrected, optimized and ready to copy and paste.</p>
+    <p>I started with a first prompt connected to several knowledge bases: the style and grammar guidelines for Miravia's digital products, the glossaries and the chatbot's own rules. As I went through the question-and-answer pairs and analyzed the results, I kept iterating on the prompt, refining its rules until the output needed minimal human review.</p>
+    <p>The final prompt is organized around four blocks:</p>
+    <ul>
+      <li><strong>Role and objectives:</strong> optimize the existing questions and answers, shortening and simplifying them in European Spanish, without changing their content.</li>
+      <li><strong>Knowledge bases:</strong> always consult the chatbot rules, the style and grammar guidelines and the glossary before generating any content.</li>
+      <li><strong>Guardrails:</strong> never invent information that is not in the input or the knowledge bases, and keep numbered steps and UI names exactly as they are.</li>
+      <li><strong>Formatting rules:</strong> consistent use of quotation marks, bold and capitalization, plus small details such as writing the € symbol without a space.</li>
+    </ul>
+
+    <h4>5. The tool</h4>
+    <p>The result is a link to a tool with two views that the customer care team can use autonomously:</p>
+    <ul>
+      <li><strong>AI chat:</strong> users paste the questions and answers to optimize and get the improved content back.</li>
+      <li><strong>Q&amp;A viewer:</strong> a history of all the optimized pairs, with a search bar, options to copy or edit each pair, and an Excel export. The team can also consult the correction guidelines in a quick reference guide.</li>
+    </ul>
+    <div class="img-grid cols-2"><img class="zoomable" src="assets/img057.jpg" alt="AI chat view"><img class="zoomable" src="assets/img058.jpg" alt="Q&amp;A viewer (blurred)"></div>
+    <p class="carousel-hint">The Q&amp;A viewer is blurred to protect internal Miravia data.</p>
+
+    <h4>6. Before and after</h4>
+    <p>The optimized answers use clear, step-by-step instructions in user-friendly language, for example: "1. Abre la app o entra en la web de Miravia. 2. Ve a 'Mi cuenta' y luego a 'Mis pedidos'..." (<em>1. Open the app or go to the Miravia website. 2. Go to "My account" and then "My orders"...</em>).</p>
+    <div class="ba-grid">
+      <p class="ba-head">Before</p>
+      <p class="ba-head">After</p>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">¿Qué es un parcel shop?</p><p>Un Parcel Shop es un punto de recogida donde la empresa de mensajería puede dejar tu pedido. Esto ocurre si tú lo seleccionas al hacer la compra o si no fue posible entregarlo directamente en tu domicilio.</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">¿Qué es un 'parcel shop'?</p><p>Un '<strong>parcel shop</strong>' es un <strong>punto de recogida</strong>. Se trata de un establecimiento donde la empresa de mensajería puede dejar tu pedido si lo eliges al comprar o si falla la entrega a domicilio.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>The key term, 'punto de recogida', is in bold so users spot it at a glance.</li><li>The foreign term is written in lowercase and single quotes, as the guidelines require.</li><li>Simpler wording: "si falla la entrega a domicilio" replaces "si no fue posible entregarlo directamente en tu domicilio".</li></ul></div>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">¿Que es un locker?</p><p>Los lockers son módulos o armarios automatizados ubicados en lugares estratégicos como centros comerciales, estaciones de servicio o calles principales. Te permiten recoger tu pedido de forma rápida y segura, sin necesidad de contacto y en el horario que mejor te convenga.</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">¿Qué es una taquilla ('locker')?</p><p>Son <strong>taquillas automatizadas</strong> situadas en lugares estratégicos (centros comerciales, gasolineras, etc.) que te permiten recoger tu pedido de forma rápida, segura y sin contacto, en el horario que prefieras.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>The question leads with the Spanish term ("taquilla") and keeps 'locker' in parentheses, and the missing accent in "Qué" is fixed.</li><li>"Módulos o armarios automatizados" becomes "taquillas automatizadas", in bold.</li><li>Shorter and lighter, with the examples moved into parentheses.</li></ul></div>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">¿Cuánto tiempo estará mi pedido en el punto de recogida?</p><p>Tu pedido estará en el Punto de recogida por <strong>7 días laborales</strong>. Si no recoges tu pedido dentro de ese plazo, será devuelto a la tienda.</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">¿Cuánto tiempo estará mi pedido en el punto de recogida?</p><p>Tu pedido estará disponible en el punto de recogida durante <strong>7 días laborables</strong>. Si no lo recoges en ese plazo, se devolverá a la tienda y se tramitará tu <strong>reembolso</strong>.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>"Laborales" becomes "laborables" and "Punto de recogida" loses its capital letters, following the language and terminology guides.</li><li>Bold now highlights the two things users look for: the deadline and the refund.</li><li>It also tells users what happens next: the refund is processed.</li></ul></div>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">Seleccioné a domicilio como método de entrega pero mi pedido llegó a un PUDO. No sé dónde recogerlo ya que yo no seleccioné el PUDO. ¿Qué puedo hacer?</p><p>Entendemos que esta situación puede ser frustrante. Esto suele ocurrir cuando nuestro socio logístico no pudo realizar la entrega en la dirección seleccionada originalmente. Para localizar el Punto de Recogida deberás comunicarte directamente con nuestro Socio Logístico.</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">Mi pedido ha sido entregado en un punto de recogida que no elegí, ¿qué hago?</p><p>Lamentamos esta situación. A veces, si la entrega a domicilio falla, la empresa de mensajería deja el paquete en un punto de recogida cercano. Para saber dónde está, <strong>contacta</strong> directamente con la <strong>empresa de mensajería</strong>.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>Internal terms ("PUDO", "socio logístico") are replaced with the words users know: "punto de recogida" and "empresa de mensajería".</li><li>The question is shorter and written the way a user would say it.</li><li>The action users have to take ("contacta") is in bold and comes last.</li></ul></div>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">¿Cómo realizar un reembolso parcial?</p><p>Si necesitas devolver un artículo y pedir un reembolso parcial. Aquí te explicamos cómo hacerlo paso a paso, desde iniciar la solicitud hasta recibir una respuesta.</p><p>1. <strong>Entra a 'Mi perfil':</strong> Abre la app o web de Miravia y accede a tu perfil.</p><p>2. <strong>Accede a 'Mis pedidos':</strong> Busca la sección de 'Mis pedidos' para ver tus compras recientes.</p><p>3. <strong>Selecciona el pedido correspondiente:</strong> Asegúrate de que el pedido esté dentro de los 30 días posteriores a la entrega.</p><p>4. <strong>Haz clic en 'Devolver':</strong> Inicia el proceso de devolución desde la opción disponible.</p><p>5. <strong>Elige el motivo:</strong> Selecciona la razón de tu devolución.</p><p>• “Faltan partes o accesorios” o</p><p>• “He recibido menos de lo que pedí”.</p><p>6. <strong>Indica el importe que deseas solicitar como reembolso:</strong> Especifica la cantidad que deseas que te sea reembolsada.</p><p>7. <strong>Adjunta fotos claras del producto:</strong> Sube imágenes que respalden tu solicitud.</p><p>8. <strong>Revisión en 48 horas:</strong> La tienda revisará tu caso y responderá en un plazo máximo de 48 horas.</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">¿Cómo puedo solicitar un reembolso parcial?</p><p>1. Inicia sesión en tu cuenta de Miravia y ve a 'Mis pedidos'.</p><p>2. Selecciona el pedido correspondiente.</p><p>3. Pulsa 'Devolver'.</p><p>4. Selecciona el motivo ('Faltan partes o accesorios' o 'He recibido menos de lo que pedí').</p><p>5. Indica el importe que deseas solicitar como reembolso.</p><p>6. Adjunta fotos claras del artículo.</p><p>7. La tienda revisará tu caso y responderá en un plazo máximo de 48 horas.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>Seven one-line steps instead of eight steps, each with a title and an explanation.</li><li>Every step is a single action written in the imperative, with UI options in single quotes.</li><li>The long introduction is removed: the steps speak for themselves.</li></ul></div>
+      <div class="ba-cell"><p class="ba-tag">Before</p><p class="ba-q">¿Cómo/dónde puedo encontrar el código ARN?</p><p>Sabemos lo importante que es poder hacer un seguimiento de tu reembolso, puedes seguir estos pasos para encontrar el código ARN</p><p>:</p><p><strong>1. Accede a tu perfil en Miravia</strong></p><p><strong>2. Ve a la sección 'Mis pedidos'</strong></p><p><strong>3. Selecciona el pedido con reembolso confirmado</strong></p><p><strong>4. Busca la opción 'Reembolso confirmado'</strong> que podrás encontrar dentro de los detalles del pedido</p><p>5. En esa sección, podrás ver toda la información detallada. Una vez el reembolso esté procesado, podrás ver el número ARN y los datos del método al que se realizó el reembolso</p></div>
+      <div class="ba-cell"><p class="ba-tag">After</p><p class="ba-q">¿Cómo puedo encontrar el código ARN?</p><p>1. Inicia sesión en tu cuenta de Miravia.</p><p>2. Ve a 'Mis pedidos'.</p><p>3. Selecciona el pedido con reembolso confirmado.</p><p>4. Pulsa 'Reembolso confirmado' en los detalles del pedido.</p><p>5. Verás el <strong>número ARN</strong> y los datos del método al que se realizó el reembolso.</p></div>
+      <div class="ba-notes"><p class="ba-notes-title">What changed</p><ul><li>The filler introduction and the stray ":" are removed, so the answer goes straight to the steps.</li><li>Consistent formatting: the steps are no longer partly in bold, and only the key result, "número ARN", is highlighted.</li><li>The question is simplified: "¿Cómo/dónde puedo…?" becomes "¿Cómo puedo…?".</li></ul></div>
+    </div>
+
+    <h4>7. Results</h4>
+    <p>The chatbot's satisfaction rate increased from <strong>37.61% in June to 47.88% in September</strong>, a rise of more than 10 percentage points. In addition, the customer care team now has an autonomous tool to keep improving and scaling the chatbot's content.</p>
+
+<figure class="chart-fig">
+      <svg class="sat-chart" viewBox="0 0 704 300" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Chatbot satisfaction rate: June vs. September</title>
+        <desc>Line chart showing the chatbot satisfaction rate rising from 37.61% in June to 47.88% in September, an increase of 10.27 percentage points.</desc>
+        <line class="ch-grid" x1="70" y1="250.0" x2="664" y2="250.0"></line><text class="ch-ax" x="58" y="254.0" text-anchor="end">0%</text><line class="ch-grid" x1="70" y1="176.7" x2="664" y2="176.7"></line><text class="ch-ax" x="58" y="180.7" text-anchor="end">20%</text><line class="ch-grid" x1="70" y1="103.3" x2="664" y2="103.3"></line><text class="ch-ax" x="58" y="107.3" text-anchor="end">40%</text><line class="ch-grid" x1="70" y1="30.0" x2="664" y2="30.0"></line><text class="ch-ax" x="58" y="34.0" text-anchor="end">60%</text>
+        <line class="ch-line" x1="200" y1="112.1" x2="504" y2="74.4"></line>
+        <circle class="ch-dot" cx="200" cy="112.1" r="7"></circle>
+        <circle class="ch-dot" cx="504" cy="74.4" r="7"></circle>
+        <text class="ch-val" x="200" y="96.1" text-anchor="middle">37.61%</text>
+        <text class="ch-val" x="504" y="58.4" text-anchor="middle">47.88%</text>
+        <text class="ch-delta" x="352" y="125.2" text-anchor="middle">+10.27 pp</text>
+        <text class="ch-month" x="200" y="278" text-anchor="middle">June</text>
+        <text class="ch-month" x="504" y="278" text-anchor="middle">September</text>
+      </svg>
+      <figcaption>Chatbot satisfaction rate, June vs. September.</figcaption>
+    </figure>
+
+        <h4>8. Key learnings</h4>
+    <p>This project reinforced that content quality is a core part of the user experience, especially in a support channel where users are already frustrated. It also showed me how AI can scale content design work, as long as it is guided by clear guidelines and human judgment.</p>
+    <ul>
+      <li><b>Audit before automating.</b> Reviewing 208 Q&amp;A pairs revealed patterns in tone, terminology and length that shaped every rule I wrote.</li>
+      <li><b>Iterate with real data.</b> Each prompt version was tested against real answers, and every failure became a clear rule.</li>
+      <li><b>In support, clarity and empathy beat brand voice.</b> Users are often frustrated; the best answers solve the problem fast and warmly.</li>
+      <li><b>AI scales content design, human judgment steers it.</b> Content design defines what a good answer is; AI reproduces it at scale, and people keep reviewing edge cases.</li>
+      <li><b>Quality shows in the numbers.</b> Satisfaction rate rose from 37.61% to 47.88% (+10.27 pp).</li>
+    </ul>
+
+    <p class="cta-center"><a class="btn btn-primary" href="#contact">Let's work together</a></p>
+  </div>
+</article>
+
+<article id="case-trends" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#cases">← Back to case studies</a>
+    <h2 class="title" style="margin-top:20px;">Trend Radar: weekly trends into content</h2>
+    <div class="meta">
+      <div>ROLE<b>Content Designer</b></div>
+      <div>DURATION<b>2 months</b></div>
+      <div>TOOLS<b>Figma, ChatGPT, Kling AI, Alibaba D-One, CapCut</b></div>
+    </div>
+
+    <h4>1. Context</h4>
+    <p>Trend Radar ("Radar de tendencias") is an editorial-style section in the Miravia app and website that gathers the fashion and beauty trends people are talking about each week, in the spirit of brands like Zara, Sklum or Create. Users reach it through a banner on the home page, and the section is organized into categories such as "Viral in Social Media", "New obsession", "Miravia's favs" and "Also trending".</p>
+    <p>This was an end-to-end team project. This case study gives a short overview of the whole process and then focuses on the part I owned: the banners, imagery and content that present each trend, and the TikTok account I created to bring users into the section.</p>
+
+    <h4>2. The process, end to end</h4>
+    <p>Each cycle, as a team, we:</p>
+    <ol>
+      <li>Analyzed viral trends across social networks, using the previous week's data.</li>
+      <li>Wrote briefs for the products linked to each trend.</li>
+      <li>Reviewed every week whether products were still viral, to add, remove or keep them.</li>
+      <li>Created the banners and the section page.</li>
+      <li>Analyzed clicks and performance after launch.</li>
+      <li>Promoted the section on TikTok with short videos and carousels featuring each week's trending products, leading users back to the section in the app.</li>
+    </ol>
+    <div class="diagram-scroll">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 290" role="img" class="process-diagram">
+<title>Trend Radar: end-to-end process</title>
+<desc>Six-step process: analyze viral trends, write product briefs, review products weekly, create banners and page, analyze clicks and performance, promote on TikTok.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></marker></defs>
+<rect x="0" y="10" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="95.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Analyze viral</text>
+<text x="95.0" y="66.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">trends</text>
+<line x1="193" y1="55.0" x2="253" y2="55.0" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrow)"></line>
+<rect x="257" y="10" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="352.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Write product</text>
+<text x="352.0" y="66.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">briefs</text>
+<line x1="450" y1="55.0" x2="510" y2="55.0" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrow)"></line>
+<rect x="514" y="10" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="609.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Review products</text>
+<text x="609.0" y="66.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">weekly</text>
+<rect x="0" y="190" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="95.0" y="224.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Create banners</text>
+<text x="95.0" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">and page</text>
+<line x1="193" y1="235.0" x2="253" y2="235.0" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrow)"></line>
+<rect x="257" y="190" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="352.0" y="224.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Analyze clicks</text>
+<text x="352.0" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">and performance</text>
+<line x1="450" y1="235.0" x2="510" y2="235.0" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arrow)"></line>
+<rect x="514" y="190" width="190" height="90" rx="10" fill="#ECEAE1" stroke="#D1CFC5" stroke-width="1.5"></rect>
+<text x="609.0" y="224.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">Promote on</text>
+<text x="609.0" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="Merriweather, 'DejaVu Serif', Georgia, serif" font-size="15" font-weight="700" fill="#1D2422">TikTok</text>
+<path d="M 609.0 103 L 609.0 145 L 95.0 145 L 95.0 184" fill="none" stroke="#B25331" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"></path>
+</svg>
+    </div>
+
+    <h4>3. My role: banners, copy and trend imagery</h4>
+    <p>The banner on the home page is the entry point to Trend Radar, so it had to communicate each week's trend at a glance. Every cycle, I designed the banner, the imagery and the microcopy for each trend in Figma, following the editorial, magazine-like direction of the section.</p>
+    <p>To keep the section recognizable week after week, I built a consistent visual system: a short headline that names the trend, a clear CTA, and, on product cards, a social-proof sticker (e.g., "+27K Posts") and benefit chips such as free and fast shipping.</p>
+    <p>For each trend, I explored several headline and layout options before settling on one. For the "XL bags" trend, for example, I tested angles like "because size does matter" and "more space for your life".</p>
+    <p>Every banner was produced in Spanish and English and also in different sizes to adapt to each platform and available space. I adapted rather than translated, keeping the tone and the benefit: "Descubre tu nueva obsesión" became "Find your next obsession", and "Lo que arrasa en redes" became "What's trending on social media".</p>
+    <div class="banner-grid">
+      <p class="banner-col-label">English</p>
+      <p class="banner-col-label">Español</p>
+      <p class="banner-row-label">Product card with social proof</p>
+      <img class="zoomable" src="assets/img063.png" alt="Medicube product card (English)">
+      <img class="zoomable" src="assets/img064.png" alt="Medicube product card (Español)">
+      <p class="banner-row-label">Message banner</p>
+      <img class="zoomable" src="assets/img061.png" alt="Message banner (English)">
+      <img class="zoomable" src="assets/img062.png" alt="Message banner (Español)">
+      <p class="banner-row-label">Search banner · PC</p>
+      <img class="zoomable" src="assets/img065.png" alt="Search banner for desktop (English)">
+      <img class="zoomable" src="assets/img066.png" alt="Search banner for desktop (Español)">
+      <p class="banner-row-label">Search banner · App</p>
+      <img class="zoomable" src="assets/img067.png" alt="Search banner for the app (English)">
+      <img class="zoomable" src="assets/img068.png" alt="Search banner for the app (Español)">
+    </div>
+    <p class="carousel-hint" style="margin-top:18px; text-align:center;">Click any image to enlarge it.</p>
+
+    <h4>4. Miravia Trends on TikTok: a post-launch acquisition channel</h4>
+    <p>Once the section was live, the challenge was getting people to it. I created and ran @miravia_trends, a TikTok account that turns each week's trends into short videos and carousels featuring products from the radar. We chose TikTok because it's where trends are seen and spread, and because it's where our audience already spends their time. Instead of asking users to come looking for trends, we showed them the trends in the place where they discover them, and led them back to the products in the app.</p>
+    <p>My workflow:</p>
+    <ul>
+      <li><strong>Trend and brief:</strong>&nbsp;I chose which products from the week's radar were relevant to show on social media.</li>
+      <li><strong>Generation:</strong>&nbsp;first, I generated images with AI tools, like ChatGPT and Alibaba D-One (an internal one). I created the images using detailed prompts, specifying each person's appearance, the specific trending clothing or object, the pose, angles, size, lighting, and the type of camera for each image. Once I had the images, I generated short videos from each image using AI tools like Kling AI, Symphony and Alibaba D-One. I also generated these videos with specific prompts, detailing the movements of the people and the camera. Once I had a good quantity of short videos (usually 10-12), I edited the final video to be posted in CapCut and TikTok itself.</li>
+      <li><strong>Editing:</strong> finally, I edited every piece in CapCut or TikTok's native tools (pacing, text, music, transitions) so it felt native to the platform and didn't look like raw AI output.</li>
+      <li><strong>Publishing:</strong> I posted 5 times per week, aligned with the trends of that week.</li>
+    </ul>
+    <figure class="shot">
+      <img class="zoomable" src="assets/img072.png" alt="Alibaba D-One interface: generating a short video from an image">
+      <figcaption>Alibaba D-One (internal tool): generating a short video from an image with a detailed prompt.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img class="zoomable" src="assets/img073.png" alt="Kling AI interface: video generation from a starting image">
+      <figcaption>Kling AI: generating a video from a starting image, with a prompt that describes the movements of the person and the camera.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img class="zoomable" src="assets/img074.png" alt="CapCut interface: editing a video on the timeline">
+      <figcaption>CapCut: editing the final video by assembling the generated clips on the timeline.</figcaption>
+    </figure>
+
+    <h4>5. Selected work</h4>
+    <p>This is the @miravia_trends profile, followed by six of the videos I'm most proud of. Each one turns a fashion, beauty or lifestyle trend from the radar into a short, scroll-friendly piece: generated with AI from an image, then edited so it feels native to TikTok rather than like raw AI output.</p>
+    <img class="case-img zoomable tiktok-mockup" src="assets/img075.png" alt="Miravia Trends TikTok profile (@miravia_trends)">
+    <div class="video-grid">
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_bowl.jpg" src="assets/vid_bowl.mp4"></video>
+        <figcaption>Açaí bowl</figcaption>
+      </figure>
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_airport.jpg" src="assets/vid_airport.mp4"></video>
+        <figcaption>Airport outfit check</figcaption>
+      </figure>
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_reset.jpg" src="assets/vid_reset.mp4"></video>
+        <figcaption>Reset Sunday</figcaption>
+      </figure>
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_trekking.jpg" src="assets/vid_trekking.mp4"></video>
+        <figcaption>Trekking outfits</figcaption>
+      </figure>
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_autumn.jpg" src="assets/vid_autumn.mp4"></video>
+        <figcaption>Autumn outfits</figcaption>
+      </figure>
+      <figure class="video-card">
+        <video controls="" playsinline="" preload="metadata" poster="assets/vid_bolso.jpg" src="assets/vid_bolso.mp4"></video>
+        <figcaption>XL bag</figcaption>
+      </figure>
+    </div>
+
+    <h4>6. Where it stands</h4>
+    <p>The project was only two months old, so there is no growth data to share yet. What it shows is a complete, repeatable content pipeline, from weekly trend to published post, built from scratch.</p>
+
+    <h4>7. Key learnings</h4>
+    <p>Trend Radar taught me to see the whole internal process of launching a digital product. Because it was an end-to-end project, I was part of the ideation, the planning and the execution, which gave me a much clearer picture of how each phase connects to the next.</p>
+    <p>It was also a very interesting experience in teamwork: working together, dividing the tasks and relying on each other's part was a key piece of making the project move forward.</p>
+    <p>Finally, creating content for TikTok pushed me to grow my knowledge of prompting and AI. Turning a trend into consistent, natural-looking images and videos meant learning how to write detailed prompts and iterate on them, a skill I now use well beyond this project.</p>
+
+    <p class="cta-center"><a class="btn btn-primary" href="#contact">Let's work together</a></p>
+  </div>
+</article>
+
+<article id="case-porteria" class="case-full">
+  <div class="wrap">
+    <a class="back" href="#cases">← Back to case studies</a>
+    <h2 class="title" style="margin-top:20px;">La Portería: gamifying the World Cup</h2>
+    <div class="meta">
+      <div>ROLE<b>Content Designer</b></div>
+      <div>DURATION<b>1 month</b></div>
+      <div>TOOLS<b>Figma</b></div>
+    </div>
+
+    <h4>1. Context</h4>
+    <p>Ahead of the summer World Cup, Miravia launched "La Portería" ("Soccer Goal" / "A Baliza" in English and Portuguese), a football-themed minigame designed to boost engagement and reward users with points and coupons during the tournament. As Content Designer, I was responsible for the content across the entire experience: every screen in the game flow, the campaign banners, and the push/CRM notifications, localized into Spanish, English and Portuguese.</p>
+
+    <h4>2. Game flow content</h4>
+    <p>The core of the game is simple: users take penalty shots to score goals and earn points and coupons, with a limited number of daily attempts to keep them coming back. I wrote the content for the full flow — from the shooting screen copy ("¡GOOOOL!", attempt counters, CTAs like "Chutar" / "Shoot") to the reward pop-ups, where copy had to shift by prize type (seller coupon, category coupon, points, or the top-tier "legend" reward) while keeping the same energetic, celebratory tone throughout.<br><br>Here you can find some screens designed and localized in Spanish: the minigame home screen, the "¡GOOOL" scenario screen and also two pop-ups screens that appeared when the user got points as a prize.</p>
+    <div class="img-grid cols-4"><img src="assets/img045.jpg" alt="Game flow: minigame home screen"><img src="assets/img044.jpg" alt="Game flow: home screen with the ¡GOOOL! celebration"><img src="assets/img043.jpg" alt="Game flow: &quot;¡Buen intento!&quot; reward pop-up"><img src="assets/img046.jpg" alt="Game flow: &quot;¡Eres una leyenda!&quot; reward pop-up"></div>
+
+    <h4>3. Team Support: a World Cup-specific mechanic</h4>
+    <p>To tie the game more directly to the tournament, I designed the content for a "Team Support" feature: on match days, users could pick Spain or the opposing team, and if their team won, they received an extra discount coupon the next day. This mechanic connected the everyday game loop to the real excitement of the World Cup calendar, giving users a reason to come back specifically on match days.</p>
+    <div class="img-grid cols-3"><img class="zoomable" src="assets/img047.png" alt="Team Support: pick your team"><img class="zoomable" src="assets/img048.png" alt="Team Support: match live"><img class="zoomable" src="assets/img049.png" alt="Team Support: match finished"></div>
+
+    <h4>4. Campaign banners and localization</h4>
+    <p>Beyond the game itself, I wrote the copy for the campaign page and the SRP (search results page) banners that drove traffic into the game, in Spanish, English and Portuguese. I wrote the content in Spanish first, as it's the primary language for Miravia's users, then adapted it into English myself. For Portuguese — spoken by part of our seller and user base — we rely on an internal AI agent trained to translate from Spanish and English, keeping the platform consistently localized across all three languages.</p>
+    <div class="fig-grid"><figure><img class="zoomable" src="assets/img050.jpg" alt="Campaign page mockup with banners in Spanish and Portuguese"><figcaption>Homepage banner</figcaption></figure><figure><img class="zoomable" src="assets/img076.png" alt="Message inbox mockup with the Soccer Goal banner, next to the Spanish and Portuguese versions of the banner"><figcaption>Push notification</figcaption></figure></div>
+
+    <h4>5. Push and CRM notifications</h4>
+    <p>To keep users returning daily, I also wrote a series of push and CRM notifications in all three languages, designed to feel like natural nudges rather than generic reminders ("Your team did it!", "Ready for another shot?", "Don't miss it out!").</p>
+    <img class="case-img zoomable" src="assets/img052.jpg" alt="CRM notification banners in Spanish, English and Portuguese">
+
+    <h4>6. Results</h4>
+    <p>The data confirms what the Team Support mechanic was designed to do: content that reacted to real match results drove engagement far beyond generic reminders. "Team win" push notifications — sent right after Spain won a match — reached click-through rates of up to <strong>23.1%</strong>, compared to just 0.4%–0.6% for standard daily or expiry reminders. In other words, timely, event-driven content performed up to 40x better than routine notifications.</p>
+    <p>This translated directly into business impact: the game generated <strong>€125.6K in cumulative GMV</strong> over the campaign (an average of €4.1K in daily sales, across 2,905 orders and 2,675 buyers), with an average product click-through rate of 2.2%. Engagement was strong too — a <strong>64.1% shot conversion rate</strong> and a <strong>34.5% average Day 2 retention</strong>, meaning over a third of players came back the day after playing.</p>
+
+    <h4>7. Key learnings</h4>
+    <p>La Portería showed me how content design can turn a simple mechanic into something that feels timely and alive, by connecting it to a real-world event users already cared about. Writing across three languages and multiple touchpoints — game, banners, notifications — also reinforced the importance of a consistent voice that still adapts naturally to each language and format.</p>
+    <p>It also taught me how important Content Design (UX Writing) is to connect fiction with reality. La Portería is a game, a fictional world with a goalkeeper mascot, penalty shots and prizes, but it only worked because its content kept pulling that world into the real one: the match days, the team users supported, the coupons they could actually spend on Miravia. Content was the bridge that made both worlds feel like one.</p>
+    <p>Finally, the data showed that when people feel part of something, they participate far more, and that also translates into good conversion results. Letting users pick their team and react to real match results made them feel involved in the tournament, which is why those notifications reached up to 23.1% click-through rate and why the game ended up driving €125.6K in GMV.</p>
+
+    <p class="cta-center"><a class="btn btn-primary" href="#contact">Let's work together</a></p>
+  </div>
+</article>
+
+
+<script data-keep="">
+document.querySelectorAll('.carousel').forEach(function(carousel){
+  // mouse drag-to-scroll
+  (function(){
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+    carousel.addEventListener('mousedown', function(e){
+      isDown = true; moved = false;
+      startX = e.pageX; startScroll = carousel.scrollLeft;
+      carousel.classList.add('dragging');
+    });
+    window.addEventListener('mouseup', function(){
+      if (!isDown) return;
+      isDown = false;
+      carousel.classList.remove('dragging');
+    });
+    window.addEventListener('mousemove', function(e){
+      if (!isDown) return;
+      var dx = e.pageX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      carousel.scrollLeft = startScroll - dx;
+    });
+    carousel.addEventListener('click', function(e){
+      if (moved) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+  })();
+
+  var imgs = Array.prototype.slice.call(carousel.children);
+  if (imgs.length < 2) return;
+  var dots = document.createElement('div');
+  dots.className = 'carousel-dots';
+  imgs.forEach(function(img, i){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', 'Go to image ' + (i+1));
+    if (i === 0) b.classList.add('active');
+    b.addEventListener('click', function(){
+      imgs[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    });
+    dots.appendChild(b);
+  });
+  carousel.insertAdjacentElement('afterend', dots);
+
+  var ticking = false;
+  carousel.addEventListener('scroll', function(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var center = carousel.scrollLeft + carousel.clientWidth / 2;
+      var closest = 0, min = Infinity;
+      imgs.forEach(function(img, i){
+        var mid = img.offsetLeft - carousel.offsetLeft + img.offsetWidth / 2;
+        var d = Math.abs(mid - center);
+        if (d < min) { min = d; closest = i; }
+      });
+      dots.querySelectorAll('button').forEach(function(b, i){
+        b.classList.toggle('active', i === closest);
+      });
+      ticking = false;
+    });
+  }, {passive:true});
+});
+</script>
+
+<script data-keep="">
+(function(){
+  var subpages = Array.prototype.slice.call(document.querySelectorAll('.case-full'));
+  var homeEls = Array.prototype.slice.call(document.querySelectorAll('.hero, #cases, #other-projects, footer#contact'));
+  var homeAnchors = ['#cases', '#other-projects', '#contact'];
+
+  function route(){
+    var hash = window.location.hash || '#top';
+    var subpageMatch = subpages.filter(function(el){ return '#' + el.id === hash; })[0];
+
+    if (subpageMatch) {
+      homeEls.forEach(function(el){ el.style.display = 'none'; });
+      subpages.forEach(function(el){ el.style.display = (el === subpageMatch) ? 'block' : 'none'; });
+      window.scrollTo(0, 0);
+    } else {
+      subpages.forEach(function(el){ el.style.display = 'none'; });
+      homeEls.forEach(function(el){ el.style.display = ''; });
+      if (homeAnchors.indexOf(hash) !== -1) {
+        var target = document.querySelector(hash);
+        if (target) {
+          setTimeout(function(){ target.scrollIntoView({behavior:'smooth', block:'start'}); }, 0);
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+  }
+
+  window.addEventListener('hashchange', route);
+  document.addEventListener('DOMContentLoaded', route);
+  route();
+})();
+</script>
+
+<script data-keep="">
+(function(){
+  var box = null;
+  function close(){ if (box){ box.remove(); box = null; document.removeEventListener('keydown', onKey); } }
+  function onKey(e){ if (e.key === 'Escape') close(); }
+  document.addEventListener('click', function(e){
+    var img = e.target.closest && e.target.closest('img.zoomable');
+    if (!img || document.body.classList.contains('editing')) return;
+    close();
+    box = document.createElement('div');
+    box.className = 'lightbox'; box.setAttribute('data-editor-ui',''); box.setAttribute('role','dialog'); box.setAttribute('aria-modal','true');
+    var big = document.createElement('img'); big.src = img.currentSrc || img.src; big.alt = img.alt;
+    var x = document.createElement('button'); x.type = 'button'; x.className = 'lb-close'; x.setAttribute('aria-label','Close'); x.textContent = '\u00D7';
+    x.addEventListener('click', close);
+    box.addEventListener('click', function(ev){ if (ev.target === box) close(); });
+    box.appendChild(big); box.appendChild(x); document.body.appendChild(box);
+    document.addEventListener('keydown', onKey);
+    x.focus();
+  });
+})();
+</script>
+<script>
+(function(){var a=document.getElementById('lang-other');if(!a)return;var base=a.getAttribute('href').split('#')[0];function u(){a.setAttribute('href',base+(location.hash||''));}u();window.addEventListener('hashchange',u);})();
+</script>
+</body>
+</html>
